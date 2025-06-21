@@ -8,7 +8,7 @@ services:
     image: localstack/localstack@sha256:b1b9f264d6c63fcacc7009a0924fd444f20d2149e9874500683d6c37e980dd60
     ports:
       - 4510-4559:4510-4559
-      - 4566:4566
+      - 4565:4566
     environment:
       - HOST_TMP_FOLDER=/tmp/localstack
       - DOCKER_HOST=unix:///var/run/docker.sock

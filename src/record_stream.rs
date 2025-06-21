@@ -28,8 +28,8 @@ use crate::util::parse_env_var;
 
 const KAFKA_ENC_TOPICS_ENV_KEY: &str = "KAFKA_ENCRYPTED_TOPICS";
 const KAFKA_OUT_TOPICS_ENV_KEY: &str = "KAFKA_OUTPUT_TOPICS";
-const DEFAULT_ENC_KAFKA_TOPICS: &str = "typical=p3a-star-enc";
-const DEFAULT_OUT_KAFKA_TOPICS: &str = "typical=p3a-star-out";
+const DEFAULT_ENC_KAFKA_TOPICS: &str = "typical=p3a-star-enc,express=p3a-star-enc-express,slow=p3a-star-enc-slow";
+const DEFAULT_OUT_KAFKA_TOPICS: &str = "typical=p3a-star-out,express=p3a-star-out-express,slow=p3a-star-out-slow";
 const KAFKA_IAM_BROKERS_ENV_KEY: &str = "KAFKA_IAM_BROKERS";
 const KAFKA_BROKERS_ENV_KEY: &str = "KAFKA_BROKERS";
 const KAFKA_ENABLE_PLAINTEXT_ENV_KEY: &str = "KAFKA_ENABLE_PLAINTEXT";

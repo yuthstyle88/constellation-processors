@@ -208,7 +208,7 @@ pub async fn start_server(worker_count: usize, main_channel: String) -> std::io:
 
   let mut registry = <Registry>::default();
   state.web_metrics.register_metrics(&mut registry);
-  let metric_server = create_metric_server(registry, 9090)?;
+  let metric_server = create_metric_server(registry, 9099)?;
 
   info!("Starting server...");
   let main_server = HttpServer::new(move || {
@@ -256,7 +256,7 @@ pub async fn start_server(worker_count: usize, main_channel: String) -> std::io:
       .service(main_handler)
   })
   .workers(worker_count)
-  .bind(("0.0.0.0", 8080))?
+  .bind(("0.0.0.0", 8088))?
   .run();
 
   try_join(metric_server, main_server).await.map(|_| ())
